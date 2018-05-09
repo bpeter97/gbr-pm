@@ -1,0 +1,200 @@
+/*
+ * Globals
+ */
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 0.05rem solid #fff;
+}
+
+/*
+ * Base structure
+ */
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  display: none;
+  background: transparent;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* display: -ms-flexbox;
+  display: flex; */
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.55);
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../img/gbr-bg.jpg");
+  background-position: center;
+  background-repeat: repeat, no-repeat;
+  background-size: cover;
+  background-color: #8d8d8d;
+}
+
+.cover-container {
+  max-width: 65em;
+}
+
+.nav-link {
+  color: darkgreen;
+}
+
+.nav-link:hover {
+  color: green;
+}
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: 0.75rem 1.25rem;
+}
+
+a {
+  color: darkgreen;
+}
+/*
+ * Footer
+ */
+
+.github-commit-day {
+  margin-bottom: 25px;
+  margin-left: 40px;
+  position: relative;
+}
+.github-commit-day .github-inner {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px;
+  position: relative;
+}
+.github-commit-day .github-inner:before {
+  border-right: 10px solid #ddd;
+  border-style: solid;
+  border-width: 10px;
+  color: rgba(0, 0, 0, 0);
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  width: 0;
+}
+.github-commit-day .github-inner:after {
+  border-right: 10px solid #fff;
+  border-style: solid;
+  border-width: 10px;
+  color: rgba(0, 0, 0, 0);
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  left: -18px;
+  top: 6px;
+  width: 0;
+}
+.github-commit-day:before {
+  background: #078602;
+  border-radius: 2px;
+  bottom: -30px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  content: "";
+  height: 100%;
+  left: -30px;
+  position: absolute;
+  width: 3px;
+}
+.github-commit-day:after {
+  background: #09a001;
+  border: 2px solid #078602;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  content: "";
+  height: 15px;
+  left: -36px;
+  position: absolute;
+  top: 10px;
+  width: 15px;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.github-commit-day .github-head {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+.github-commit-day .github-head .date-detail {
+  overflow: hidden;
+}
+.github-commit-day .github-head .date-detail h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+.github-commit-day .github-head .post-meta {
+  float: left;
+  padding: 0 15px 0 0;
+}
+
+/* -------------------- progress bars ---------------------- */
+.progress .progress-bar {
+  animation-name: animateBar;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+}
+
+.progress {
+  background-color: #cfcfcf;
+  border: 1px solid black;
+}
+
+.progress-bar-test {
+  left: 10%;
+  right: 10%;
+  top: 5%;
+  bottom: 5%;
+  position: absolute;
+  font-weight: bold;
+}
+
+.progress-card {
+  box-shadow: none;
+  border: 1px solid #c7c7c7;
+}
+
+@keyframes animateBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.card {
+  border: 1px solid black;
+}
