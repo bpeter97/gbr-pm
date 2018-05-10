@@ -93,29 +93,5 @@ hbs.registerHelper("commits", items => {
 
 // Use Routes
 app.use("/", index);
-// app.get("/", (req, res) => {
-//   // api.github.com/repos/bpeter97/gbr-mern/
-//   fetch("https://api.github.com/repos/bpeter97/gbr-mern/commits")
-//     .then(results => results.json())
-//     .then(json => {
-//       var commits = [];
-
-//       json.map(c => {
-//         commit = {
-//           author: c.author.login,
-//           date: c.commit.author.date,
-//           message: c.commit.message,
-//           url: c.commit.tree.url
-//         };
-//         commits.push(commit);
-//       });
-
-//       // res.send(commits);
-//       res.render("index.hbs", {
-//         gitHubCommits: commits
-//       });
-//     })
-//     .catch(e => console.log(e));
-// });
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
