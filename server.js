@@ -71,9 +71,14 @@ hbs.registerHelper("commits", items => {
       display = display + "</p></div>";
       display = display + '<div class="d-none d-md-block col-md-6 ">';
       display = display + "<small class='d-none d-md-block'>";
+      if (items[branch].commits[i].author == "bpeter97") {
+        var author = "Brian Peter Jr";
+      } else if (items[branch].commits[i].author == "twh0008") {
+        var author = "Taylor Hartley";
+      }
       display =
         display +
-        items[branch].commits[i].author +
+        author +
         " committed on " +
         moment(items[branch].commits[i].date).format("MMMM Do, YYYY");
       display = display + "</small>";
