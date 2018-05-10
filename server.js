@@ -1,5 +1,4 @@
 const express = require("express");
-const fetch = require("node-fetch");
 const hbs = require("hbs");
 const moment = require("moment");
 
