@@ -22,7 +22,6 @@
 </head>
 
 <body class="text-center">
-
   <div class="cover-container w-100 h-100 p-3 mx-auto">
 
     <!--Panel-->
@@ -87,34 +86,7 @@
         <span class="h3">Github Repository</span>
       </div>
       <div class="card-block">
-        <ul class="nav nav-tabs pt-2 px-4" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="master-tab" data-toggle="tab" href="#master" role="tab" aria-controls="master
-            " aria-selected="true">Master Branch</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile
-            " aria-selected="false">user-routes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact
-            " aria-selected="false">dashboard</a>
-          </li>
-        </ul>
-        <div class="tab-content pb-2 px-4" id="myTabContent">
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            ...
-          </div>
-          <div class="tab-pane fade show active" id="master" role="tabpanel" aria-labelledby="master-tab" style="overflow: hidden;">
-            <div class="timeline mt-3 w-90" style="overflow-y: scroll; height:280px; overflow-x: hidden;">
-              <div id="wallmessages">
-                {{#commits gitHubCommits}}{{/commits}}
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-
-        </div>
+        {{#commits commitData}}{{/commits}}
       </div>
     </div>
     <!--/.Panel-->
